@@ -1,4 +1,5 @@
 ![Python application test with Github Actions](https://github.com/chegeapollo11/apollo-udacity-ci-cd-pipeline/actions/workflows/main.yml/badge.svg)
+[![Build Status](https://dev.azure.com/chegeapollo11/apollo-udacity-ci-cd-pipeline/_apis/build/status/chegeapollo11.apollo-udacity-ci-cd-pipeline?branchName=master)](https://dev.azure.com/chegeapollo11/apollo-udacity-ci-cd-pipeline/_build/latest?definitionId=1&branchName=master)
 
 
 # Overview
