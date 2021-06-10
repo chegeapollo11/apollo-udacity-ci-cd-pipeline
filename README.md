@@ -19,32 +19,35 @@ This is a python flask based machining learning application that demostrates Dev
 ### Running The Project:
 Follow the steps below to get started and run the project:
 
-1.  Connect to **Azure Cloud Shell** from **Azure Portal**.
+1. Connect to **Azure Cloud Shell** from **Azure Portal**.
 
-2.  Clone the project in **Azure Cloud Shell** using this command as illustrated below: `git clone git@github.com:chegeapollo11/apollo-udacity-ci-cd-pipeline.git`
+1. Clone the project in **Azure Cloud Shell** using this command as illustrated below: `git clone git@github.com:chegeapollo11/apollo-udacity-ci-cd-pipeline.git`
 ![Azure Cloud Shell Cloned Repository](screenshots/1.%20azure-cloud-shell-cloned-repo.png?raw=true "Azure Cloud Shell Cloned Repository")
-3.  Navigate to the newly cloned project using this command: `cd apollo-udacity-ci-cd-pipeline`
-4.  Create a local working branch from **Azure Cloud Shell** using this command: `git checkout -b feature/project-demo`
-5.  Publish the local working branch to **Github** using this command: `git push -u origin feature/project-demo`
-6.  Next, create a python virtual environment from **Azure Cloud Shell** using this command: `python -m venv venv`
-7.  Activate the python virtual environment using this command: `source venv/bin/activate`
-8.  Make required changes to the project then run tests locally using the following command: `make all`
-9.  Observe the following output from **Azure Cloud Shell** if the command runs successfully:
+1.  Navigate to the newly cloned project using this command: `cd apollo-udacity-ci-cd-pipeline`
+1.  Create a local working branch from **Azure Cloud Shell** using this command: `git checkout -b feature/project-demo`
+1.  Publish the local working branch to **Github** using this command: `git push -u origin feature/project-demo`
+1.  Next, create a python virtual environment from **Azure Cloud Shell** using this command: `python -m venv venv`
+1.  Activate the python virtual environment using this command: `source venv/bin/activate`
+1.  Make required changes to the project then run tests locally using the following command: `make all`
+1.  Observe the following output from **Azure Cloud Shell** if the command runs successfully:
 ![Azure Cloud Shell Make All](screenshots/2.2.%20azure-cloud-shell-make-all-ml-app.png?raw=true "Azure Cloud Shell Make All")
-10. Commit and push your changes to **Github** using the following command: `git add . && git commit -m "Test continuous integration" && git push`
-11. Observe that the **Github Actions CI Job** is triggered and executes successfully as illustrated below:
+1. Execute a simple test run from **Azure Cloud Shell** by running this command: `python -m pytest -vv --disable-warnings tests/test_app.py`
+1. Observe the following output from **Azure Cloud Shell** if the command runs successfully:
+![Azure Cloud Shell Test Run](screenshots/2.1.%20azure-cloud-shell-test-run.png?raw=true "Azure Cloud Shell Test Run")
+1. Commit and push your changes to **Github** using the following command: `git add . && git commit -m "Test continuous integration" && git push`
+1. Observe that the **Github Actions CI Job** is triggered and executes successfully as illustrated below:
 ![Github Actions Continuous Integration](screenshots/3.%20github-actions-continuous-integration.png?raw=true "Github Actions Continuous Integration")
-12. From **Github**, create a pull request for your working branch with the ***master*** branch as the target branch.
-13. Merge and complete the pull request to automatically trigger the **Azure DevOps CD Job**.
-14. Nagivate to https://dev.azure.com/{organization}/{project} and confirm a successful run of the **Azure DevOps CD Job** from the pipeline execution logs as illustrated below:
+1. From **Github**, create a pull request for your working branch with the ***master*** branch as the target branch.
+1. Merge and complete the pull request to automatically trigger the **Azure DevOps CD Job**.
+1. Nagivate to https://dev.azure.com/{organization}/{project} and confirm a successful run of the **Azure DevOps CD Job** from the pipeline execution logs as illustrated below:
 ![Azure DevOps Continuous Delivery](screenshots/4.%20azure-devops-pipelines-continuous-delivery.png?raw=true "Azure DevOps Continuous Delivery")
-15. Navigate to **Azure Portal** and confirm from the **Azure App Service Deployment Center** that the application was deployed successfully as illustrated below:
+1. Navigate to **Azure Portal** and confirm from the **Azure App Service Deployment Center** that the application was deployed successfully as illustrated below:
 ![Azure App Service Deployment](screenshots/5.1.%20azure-app-service-deployment.png?raw=true "Azure App Service Deployment")
-16. Navigate to the [App Url](https://{app-url}.azurewebsites.net/) and confirm that the application is up and running after deployment as illustrated below:
+1. Navigate to the [App Url](https://{app-url}.azurewebsites.net/) and confirm that the application is up and running after deployment as illustrated below:
 ![Azure App Service Running Application](screenshots/5.2.%20azure-app-service-running-application.png?raw=true "Azure App Service Running Application")
-17. From **Azure Cloud Shell**, grant execute permissions to the prediction script by running the following command: `chmod +x make_predict_azure_app.sh`
-18. From **Azure Cloud Shell**, verify a prediction from the deployed application in azure by running the following command: `./make_predict_azure_app.sh`
-19. Observe the following output from a successful prediction as illustrated below:
+1. From **Azure Cloud Shell**, grant execute permissions to the prediction script by running the following command: `chmod +x make_predict_azure_app.sh`
+1. From **Azure Cloud Shell**, verify a prediction from the deployed application in azure by running the following command: `./make_predict_azure_app.sh`
+1. Observe the following output from a successful prediction as illustrated below:
 ![Azure Cloud Shell Make Prediction](screenshots/2.3.%20azure-cloud-shell-make-prediction.png?raw=true "Azure Cloud Shell Make Prediction")
 
 ## Enhancements
