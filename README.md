@@ -49,6 +49,15 @@ Follow the steps below to get started and run the project:
 1. From **Azure Cloud Shell**, verify a prediction from the deployed application in azure by running the following command: `./make_predict_azure_app.sh`
 1. Observe the following output from a successful prediction as illustrated below:
 ![Azure Cloud Shell Make Prediction](screenshots/2.3.%20azure-cloud-shell-make-prediction.png?raw=true "Azure Cloud Shell Make Prediction")
+1. From your local cloned repository, run the following command to  start a load test using locust: `locust --host=https://apollo-udacity-ci-cd-pipeline-webapp.azurewebsites.net`
+1. Open your web browser and navigate to the following address to lauch the **Locust Web UI**: `http://localhost:8089/`
+1. Enter your preferred number of users and spawn rate as illustrated below then click **"Start Swarming"** button:
+![Locust Web UI](screenshots/6.1.%20locust-web-ui.png?raw=true "Locust Web UI")
+1. Observe the following statistics and charts in the subsequent page:
+![Locust Statistics](screenshots/6.2.%20locust-statistics.png?raw=true "Locust Statistics")
+![Locust Charts](screenshots/6.3.%20locust-charts.png?raw=true "Locust Charts")
+1. Finally, click the **"Stop"** button from **Locust Web UI** and observe the following out from the console logs:
+![Locust Console Logs](screenshots/6.4.%20locust-console-logs.png?raw=true "Locust Console Logs")
 
 ## Enhancements
 
